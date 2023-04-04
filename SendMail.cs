@@ -1,69 +1,57 @@
 using System;
-using System.Net;
-using System.Net.Mail;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Net.Mail; // mail gönderme işlemleri için gereklidir.
+using System.Text;
+using System.Text.RegularExpressions;//regex komutu için gerekli
 
-public class SendMail
+namespace E_IMZA
 {
-     public void Mail()
+    public class MailClass
+    {
+        public static bool Send(string MailHesabi, string MailHesapSifresi, string MailUnvan, string MailAdresi, string MailKonu, string MailIcerik,  string Pop3Host, int Pop3Port)
         {
             try
             {
-                
-                string Folder = @"C:\Users\";//Buraya Dosya yolu girilmeli.
-                var files = new DirectoryInfo(Folder).GetFiles("*.*");
-                string latestfile = "";
+                System.Net.NetworkCredential cred = new System.Net.NetworkCredential(MailHesabi, MailHesapSifresi);
+                // mail göndermek için oturum açtık
 
-                DateTime lastModified = DateTime.MinValue;
+                System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage(); // yeni mail oluşturduk
+                mail.From = new System.Net.Mail.MailAddress(MailHesabi, MailUnvan); // maili gönderecek hesabı belirttik
+                mail.To.Add(MailAdresi); // mail gönderilecek adres
+                mail.Subject = MailKonu; // mailin konusu
+                mail.IsBodyHtml = true; // mail içeriği html olarak gönderilsin
+                mail.Body = MailIcerik; // mailin içeriği
 
-                foreach (FileInfo file in files)
-                {
-                    if (file.LastWriteTime > lastModified)
-                    {
-                        lastModified = file.LastWriteTime;
-                        latestfile = @"C:\Users\"+ file.Name; //belirtilen dizindeki en son düzenlenen dosyaya erişir.
-                    }
-                }
-                
+                /*Burası mailimize dosya eklemek istediğimizde aktif edilebilir.burayı aktif ettiğimizde Send metodumuzun parametrelerine MailEkleri stringini eklememiz gerek.*/
+                //mail.Attachments.Clear(); // mail eklerini temizledik
+                //string[] sonuc1 = Regex.Split(MailEkleri, "/");
+                //// MailEkleri parametresinde mailie ekleyeceğimiz tüm dosyaları aralarına " / " koyarak birbilerine ekledik
+                //foreach (string items in sonuc1)
+                //{
+                //    if (items != "")
+                //    {
+                //        mail.Attachments.Add(new Attachment("\\Mail_Eklerinin_Yolu\\" + items));
+                //        //  MailEkleri parametresinden gelen veriyi " / " işareti sayesinde parçaladık. 
+                //        // Kaydettiğimiz yerin yolunu ile birlikte dosyaları aldık ve maile ekledik.
+                //    }
+                //}
+                //// göndereceğimiz maili hazırladık.
 
+                System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient(Pop3Host, Pop3Port); // smtp servere bağlandık
+                smtp.UseDefaultCredentials = false; // varsayılan girişi kullanmadık
+                smtp.EnableSsl = true; // ssl kullanımına izin verdik
+                smtp.Credentials = cred; // server üzerindeki oturumumuzu yukarıda belirttiğimiz NetworkCredential üzerinden sağladık.
+                smtp.Send(mail); // mailimizi gönderdik.
+                // smtp yani Simple Mail Transfer Protocol üzerinden maili gönderiyoruz.
 
-                SmtpClient smtp = new SmtpClient();//client tanımladık.
-                smtp.Host = "smtp.gmail.com";  
-                smtp.Port = 587;
-                smtp.EnableSsl = true;
-                smtp.Credentials = new System.Net.NetworkCredential("maili gönderen", "şifre");
-                MailMessage eposta = new MailMessage();
-                eposta.From = new MailAddress("maili gönderen");
-                eposta.To.Add("maili alan");
-
-                eposta.Subject = "Konu";
-                eposta.Body = "Mail Gövdesi";
-                Attachment data = new Attachment(latestfile, MediaTypeNames.Application.Octet);
-                ContentDisposition disposition = data.ContentDisposition;
-                disposition.CreationDate = System.IO.File.GetCreationTime(latestfile);
-
-                disposition.ModificationDate = System.IO.File.GetLastWriteTime(latestfile);
-                disposition.ReadDate = System.IO.File.GetLastAccessTime(latestfile);
-                eposta.Attachments.Add(data);
-
-
-                try
-                {
-                    smtp.Send(eposta);
-                }
-                catch (Exception ex)
-                {
-
-                   throw new Exception(ex.Message);
-                }
-
-              
-                 throw new Exception("Mail başarı ile gönderildi.");
+                return true;
             }
-            catch(Exception ex)
+            catch (Exception)
             {
-                throw new Exception(ex.Message);
-                
+                return false;
             }
-
         }
-  }
+    }
+}
