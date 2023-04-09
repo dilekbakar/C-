@@ -1,4 +1,4 @@
- public interface IRepository<TEntity> where TEntity : BaseEntity
+ public interface IRepository<TEntity> where TEntity : class
     {
         Task<int> AddAsync(TEntity entity);
         int Add(TEntity entity);
