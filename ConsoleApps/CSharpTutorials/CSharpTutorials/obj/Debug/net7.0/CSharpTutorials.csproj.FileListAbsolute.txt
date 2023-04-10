@@ -1,0 +1,15 @@
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\bin\Debug\net7.0\CSharpTutorials.exe
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\bin\Debug\net7.0\CSharpTutorials.deps.json
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\bin\Debug\net7.0\CSharpTutorials.runtimeconfig.json
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\bin\Debug\net7.0\CSharpTutorials.dll
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\bin\Debug\net7.0\CSharpTutorials.pdb
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\obj\Debug\net7.0\CSharpTutorials.csproj.AssemblyReference.cache
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\obj\Debug\net7.0\CSharpTutorials.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\obj\Debug\net7.0\CSharpTutorials.AssemblyInfoInputs.cache
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\obj\Debug\net7.0\CSharpTutorials.AssemblyInfo.cs
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\obj\Debug\net7.0\CSharpTutorials.csproj.CoreCompileInputs.cache
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\obj\Debug\net7.0\CSharpTutorials.dll
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\obj\Debug\net7.0\refint\CSharpTutorials.dll
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\obj\Debug\net7.0\CSharpTutorials.pdb
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\obj\Debug\net7.0\CSharpTutorials.genruntimeconfig.cache
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\obj\Debug\net7.0\ref\CSharpTutorials.dll
