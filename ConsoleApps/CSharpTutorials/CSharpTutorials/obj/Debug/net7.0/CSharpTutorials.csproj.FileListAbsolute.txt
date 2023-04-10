@@ -13,3 +13,5 @@ C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTuto
 C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\obj\Debug\net7.0\CSharpTutorials.pdb
 C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\obj\Debug\net7.0\CSharpTutorials.genruntimeconfig.cache
 C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\obj\Debug\net7.0\ref\CSharpTutorials.dll
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\bin\Debug\net7.0\HtmlAgilityPack.dll
+C:\Users\black\OneDrive\Masaüstü\CSharp\ConsoleApps\CSharpTutorials\CSharpTutorials\obj\Debug\net7.0\CSharpTutorials.csproj.CopyComplete

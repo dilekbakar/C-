@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "oAE5w0GVzpN8GqwInyd4EAQRZhUvaycTJvhQ/y02/43+RoQmlDAICujT9NZMzUiq87L7oWa6Z83cA6ZAhhZTnw==",
+  "dgSpecHash": "4OWzcGTCuz9z97ifu1AbE0PeYoTygPfLouqo6xtvR4+BeqBGOat3kKx4i6WXTP89yq9sdVCCqstN1UqDB2ywfQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\black\\OneDrive\\Masaüstü\\CSharp\\ConsoleApps\\CSharpTutorials\\CSharpTutorials\\CSharpTutorials.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\black\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512"
+  ],
   "logs": []
 }
